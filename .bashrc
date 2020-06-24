@@ -15,13 +15,13 @@ alias ls='ls --color=auto'
 #export PS1="\e[0;33m😷\e[m "
 export PS1="\e[1;35m[\W]\e[m\e[0;34m🐵\e[m "
 
-alias ea="vi ~/.bashrc && source ~/.bashrc"
-
 alias top=ytop
 alias x=startx
 alias vi=micro
 alias nano=micro
 alias pico=micro
+
+alias ea="vi ~/.bashrc && source ~/.bashrc"
 
 alias l="ls -lhA"
 alias i="sudo xbps-install -Sy "

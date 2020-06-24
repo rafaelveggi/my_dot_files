@@ -23,7 +23,7 @@ alias vi=micro
 alias nano=micro
 alias pico=micro
 
-alias l="ls -lha"
+alias l="ls -lhA"
 alias i="sudo xbps-install -Sy "
 alias remove="sudo xbps-remove -y"
 alias update="sudo xbps-install -Suvy"

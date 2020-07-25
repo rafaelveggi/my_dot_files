@@ -8,21 +8,35 @@ then
     stty -ixon
 fi 
 
+alias sudo='sudo '
 alias ls='ls --color=auto'
 
 #PS1='[\u@\h \W]\$ '
-#PS1="\e[0;60m🐵\e[m "
-#export PS1="\e[0;33m😷\e[m "
-export PS1="\e[1;35m[\W]\e[m\e[0;34m🐵\e[m "
+PS1="[\W]🐵 "
 
+alias kr="sudo kbdrate -r 2.0"
+
+alias tree="tree -L 1"
+alias treee="tree -L 2"
+alias treeee="tree"
+
+alias 🐵="whoami; uname -a"
 alias top=ytop
 alias x=startx
+
 alias vi=micro
 alias nano=micro
 alias pico=micro
+alias vsc="code-oss ."
 
+
+alias xm="xmodmap ~/.Xmodmap"
 alias ea="vi ~/.bashrc && source ~/.bashrc"
+alias ae=ea
 
+alias xev="xev -event keyboard"
+
+alias md="mkdir -p"
 alias l="ls -lhA"
 alias i="sudo xbps-install -Sy "
 alias remove="sudo xbps-remove -y"
@@ -60,6 +74,10 @@ export LESS_TERMCAP_ZO=$(tput ssupm)
 export LESS_TERMCAP_ZW=$(tput rsupm)
 
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# check the window size after each command and, if necessary,
+# update the values of LINES and COLUMNS.
+shopt -s checkwinsize

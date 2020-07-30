@@ -1,6 +1,8 @@
 #!/bin/bash
 
 ln -sf ~/dotfiles/.bashrc ~/.bashrc
+ln -sf ~/dotfiles/.bash_profile ~/.bash_profile
+#ln -sf ~/dotfiles/.asoundrc ~/.asoundrc
 ln -sf ~/dotfiles/.Xmodmap ~/.Xmodmap
 ln -sf ~/dotfiles/.xinitrc ~/.xinitrc
 ln -sf ~/dotfiles/.inputrc ~/.inputrc

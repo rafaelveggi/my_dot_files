@@ -4,4 +4,4 @@
 [ -f $HOME/.bashrc ] && . $HOME/.bashrc
 
 
-amixer set Master 70%
+amixer set Master 80%

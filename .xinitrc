@@ -13,7 +13,7 @@ battery_life()
 while true; do
 	DATE=$( date +"%F|%a|%R" )
 	xsetroot -name " $DATE $( battery_life )"
-	sleep 1m
+	sleep 10s
 done &
 
 exec dwm

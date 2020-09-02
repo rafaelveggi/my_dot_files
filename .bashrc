@@ -11,10 +11,16 @@ fi
 alias sudo='sudo '
 alias ls='ls --color=auto'
 
+alias cd-="cd -"
+alias cdd="cd .."
+alias cddd="cd ../.."
+
 #PS1='[\u@\h \W]\$ '
 PS1="[\W]🐵 "
 
-alias kr="sudo kbdrate -r 2.0"
+alias vol="alsamixer"
+
+#alias kr="sudo kbdrate -r 2.0"
 
 alias tree="tree -L 1"
 alias treee="tree -L 2"
@@ -47,8 +53,6 @@ alias search="xbps-query -Rs "
 alias cls=clear
 alias stopx="sudo killall Xorg"
 alias xs=cd
-alias cdd="cd ../"
-alias cd-="cd -"
 
 alias A="git add -A"
 alias S="git status"
@@ -56,6 +60,8 @@ alias C="git commit -m"
 alias L="git log"
 alias Cc-="git checkout -"
 alias Cc="git checkout"
+
+alias ns="npm run start"
 
 export MANPAGER='less -s -M +Gg'
 

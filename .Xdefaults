@@ -1,0 +1,16 @@
+XTerm*termName: xterm-256color
+
+XTerm*utf8: 1
+
+xterm*faceName: DejaVu Sans Mono
+xterm*faceSize: 11
+
+XTerm*Background: lemon
+XTerm*Foreground: #333333
+XTerm*pointerColor: white
+XTerm*pointerColorBackground: darkred
+XTerm*cursorColor: gold1
+
+XTerm*SaveLines: 9000
+
+XTerm*.vt100.metaSendsEscape: true

@@ -15,10 +15,14 @@ alias cd-="cd -"
 alias cdd="cd .."
 alias cddd="cd ../.."
 
+alias rmf='rm -rf '
 #PS1='[\u@\h \W]\$ '
 PS1="[\W]🐵 "
 
 alias vol="alsamixer"
+
+alias ea="vi ~/.bashrc && source ~/.bashrc"
+alias ae=ea
 
 #alias kr="sudo kbdrate -r 2.0"
 
@@ -35,24 +39,22 @@ alias nano=micro
 alias pico=micro
 alias vsc="code-oss ."
 
-
-alias xm="xmodmap ~/.Xmodmap"
-alias ea="vi ~/.bashrc && source ~/.bashrc"
-alias ae=ea
-
+alias psx="ps aux |grep "
 alias xev="xev -event keyboard"
+alias xm="xmodmap ~/.Xmodmap"
 
 alias md="mkdir -p"
 alias l="ls -lhA"
 alias i="sudo xbps-install -Sy "
 alias remove="sudo xbps-remove -y"
-alias update="sudo xbps-install -Suvy"
-alias wifi="sudo wpa_supplicant -i wlp5s0 -c /etc/wpa_supplicant/wpa_supplicant.conf -B"
+alias update="sudo xbps-install -Suvy; sudo xbps-remove -o"
 alias search="xbps-query -Rs "
 
 alias cls=clear
 alias stopx="sudo killall Xorg"
 alias xs=cd
+
+alias wifi="sudo wpa_supplicant -i wlp5s0 -c /etc/wpa_supplicant/wpa_supplicant.conf -B"
 
 alias A="git add -A"
 alias S="git status"
@@ -60,6 +62,7 @@ alias C="git commit -m"
 alias L="git log"
 alias Cc-="git checkout -"
 alias Cc="git checkout"
+alias amend="git commit --amend"
 
 alias ns="npm run start"
 

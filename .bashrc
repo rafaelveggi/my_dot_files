@@ -29,7 +29,7 @@ alias ae=ea
 
 alias tree="tree -L 1"
 alias treee="tree -L 2"
-alias treeee="tree"
+alias treeee="tree -L 3"
 
 alias top=ytop
 alias x=startx
@@ -59,12 +59,16 @@ alias wifi="sudo wpa_supplicant -i wlp5s0 -c /etc/wpa_supplicant/wpa_supplicant.
 alias A="git add -A"
 alias S="git status"
 alias C="git commit -m"
+alias Cm="A; C"
 alias L="git lg"
-alias Cc-="git checkout -"
-alias Cc="git checkout"
-alias amend="git commit --amend"
+alias Ch-="git checkout -"
+alias Ch="git checkout"
+alias M="git commit --amend"
 
 alias ns="npm run start"
+alias ni="npm install"
+
+alias ytdla="youtube-dl -i --extract-audio --audio-format mp3 --audio-quality 0 "
 
 export MANPAGER='less -s -M +Gg'
 

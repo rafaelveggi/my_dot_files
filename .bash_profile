@@ -1,8 +1,10 @@
-# .bash_profile
+#!/bin/sh
 
 # Get the aliases and functions
 [ -f $HOME/.bashrc ] && . $HOME/.bashrc
 
 
 #amixer set Master 80%
-wifi
+
+
+export PATH=$PATH:/home/raf/src/liquibase/liquibase

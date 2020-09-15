@@ -1,0 +1,1 @@
+sudo -iu postgres pg_ctl start -D /var/lib/postgresql/data/ -l serverlog

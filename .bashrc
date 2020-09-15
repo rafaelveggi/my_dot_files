@@ -96,4 +96,8 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 shopt -s checkwinsize
 
 
-source ~/pretty-git-for-bash/bash_pretty_git
+source ~/src/pretty-git-for-bash/bash_pretty_git
+
+
+#connect to mysql inside a container $1=img_hash $2=username
+alias dockermysql="docker exec -it $1 mysql -u $2 -p"

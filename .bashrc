@@ -10,52 +10,35 @@ fi
 
 alias sudo='sudo '
 alias ls='ls --color=auto'
-
 alias cd-="cd -"
 alias cdd="cd .."
 alias cddd="cd ../.."
-
 alias rmf='rm -rf '
-#PS1='[\u@\h \W]\$ '
-#PS1="[\W]🐵 "
-#alias 🐵="whoami; uname -a"
-
 alias vol="alsamixer"
-
 alias ea="vi ~/.bashrc && source ~/.bashrc"
 alias ae=ea
-
-#alias kr="sudo kbdrate -r 2.0"
-
 alias tree="tree -L 1"
 alias treee="tree -L 2"
 alias treeee="tree -L 3"
-
 alias top=ytop
 alias x=startx
-
 alias vi=micro
 alias nano=micro
 alias pico=micro
 alias vsc="code-oss ."
-
 alias psx="ps aux |grep "
 alias xev="xev -event keyboard"
 alias xm="xmodmap ~/.Xmodmap"
-
 alias md="mkdir -p"
 alias l="ls -lhA"
 alias i="sudo xbps-install -Sy "
 alias remove="sudo xbps-remove -y"
 alias update="sudo xbps-install -Suvy; sudo xbps-remove -o"
 alias search="xbps-query -Rs "
-
 alias cls=clear
 alias stopx="sudo killall Xorg"
 alias xs=cd
-
 alias wifi="sudo wpa_supplicant -i wlp5s0 -c /etc/wpa_supplicant/wpa_supplicant.conf -B"
-
 alias A="git add -A"
 alias S="git status"
 alias C="git commit -m"
@@ -64,28 +47,12 @@ alias L="git lg"
 alias Ch-="git checkout -"
 alias Ch="git checkout"
 alias M="git commit --amend"
-
 alias ns="npm run start"
+alias nv="npm run serve"
 alias ni="npm install"
-
 alias ytdla="youtube-dl -i --extract-audio --audio-format mp3 --audio-quality 0 "
 
 export MANPAGER='less -s -M +Gg'
-
-#export LESS_TERMCAP_mb=$(tput bold; tput setaf 22)
-#export LESS_TERMCAP_md=$(tput bold; tput setaf 69)
-#export LESS_TERMCAP_me=$(tput sgr0)
-#export LESS_TERMCAP_so=$(tput bold; tput setaf 136; tput setab 20)
-#export LESS_TERMCAP_se=$(tput rmso; tput sgr0)
-#export LESS_TERMCAP_us=$(tput smul; tput bold; tput setaf 208)
-#export LESS_TERMCAP_ue=$(tput rmul; tput sgr0)
-#export LESS_TERMCAP_mr=$(tput rev)
-#export LESS_TERMCAP_mh=$(tput dim)
-#export LESS_TERMCAP_ZN=$(tput ssubm)
-#export LESS_TERMCAP_ZV=$(tput rsubm)
-#export LESS_TERMCAP_ZO=$(tput ssupm)
-#export LESS_TERMCAP_ZW=$(tput rsupm)
-
 
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
@@ -95,9 +62,9 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 # update the values of LINES and COLUMNS.
 shopt -s checkwinsize
 
-
 source ~/src/pretty-git-for-bash/bash_pretty_git
 
-
+#################################################################
+# ZINC
 #connect to mysql inside a container $1=img_hash $2=username
-alias dockermysql="docker exec -it $1 mysql -u $2 -p"
+alias dockermysql="docker exec -it mysql $1 -u $2 -p"

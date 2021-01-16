@@ -1,0 +1,40 @@
+docker### log into mysql
+$ docker ps
+$ docker exec -it {containerId} bash
+/# mysql --user=root -p # 'root'
+mysql> SHOW DATABASES;
+mysql> USE zinc;
+mysql> SHOW TABLES;
+mysql> DESCRIBE {table_name};
+
+mysql> DROP SCHEMA zinc;
+mysql> CREATE SCHEMA zinc DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+
+DROP SCHEMA zinc; CREATE SCHEMA zinc DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+
+$ cd zinc-sql
+$ git pull 
+$ liquibase update
+
+INSERT INTO user
+(
+  id,
+  first_name, 
+  last_name, 
+  email, 
+  password
+) 
+VALUES 
+(
+  "000_admin_id_000",
+  "Super", 
+  "Admin", 
+  "admin@zinc.tech", 
+  "{bcrypt}$2a$10$IEMbGiYZfpivC9QDEHuHru1Ceh8I7FMqDJvpRIsBxj1KQ8lpZrWaa"
+)
+;
+
+mysql> USE zinc;
+mysql> SHOW TABLES;
+mysql> SELECT * FROM user \G
+

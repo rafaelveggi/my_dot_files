@@ -1,6 +1,6 @@
 #!/bin/sh
 
-xmodmap ~/.Xmodmap
+#xmodmap ~/.Xmodmap
 
 battery_life()
 {
@@ -17,3 +17,4 @@ while true; do
 done &
 
 exec dwm
+#exec dwm

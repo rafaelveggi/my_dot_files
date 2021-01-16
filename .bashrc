@@ -7,7 +7,8 @@ if [[ -t 0 && $- = *i* ]]
 then
     stty -ixon
 fi 
-
+alias cp='cp -i'
+alias mv='mv -i'
 alias sudo='sudo '
 alias ls='ls --color=auto'
 alias cd-="cd -"
@@ -34,24 +35,33 @@ alias l="ls -lhA"
 alias i="sudo xbps-install -Sy "
 alias remove="sudo xbps-remove -y"
 alias update="sudo xbps-install -Suvy; sudo xbps-remove -o"
-alias search="xbps-query -Rs "
+alias search="xbps-query -Rs $1"
 alias cls=clear
 alias stopx="sudo killall Xorg"
 alias xs=cd
 #alias wifi="sudo wpa_supplicant -i wlp5s0 -c /etc/wpa_supplicant/wpa_supplicant.conf -B"
 alias wifi="sudo wpa_supplicant -i wlp3s0 -c /etc/wpa_supplicant/wpa_supplicant.conf -B"
+
 alias A="git add -A"
 alias S="git status"
 alias C="git commit -m"
-alias Cm="A; C"
+alias AC="A; C"
 alias L="git lg"
 alias Ch-="git checkout -"
 alias Ch="git checkout"
 alias M="git commit --amend"
+
 alias ns="npm run start"
 alias nv="npm run serve"
 alias ni="npm install"
 alias ytdla="youtube-dl -i --extract-audio --audio-format mp3 --audio-quality 0 "
+alias monitor1="xrandr --output LVDS1 --auto; xrandr --output VGA1 --off"
+alias monitor2="xrandr --output LVDS1 --off; xrandr --output VGA1 --mode 1920x1080"
+#alias monitors="xrandr --output VGA1 --mode 1920x1080 --right-of LVDS1"
+alias monitors="xrandr --output VGA1 --mode 1920x1080 --left-of LVDS1"
+
+
+alias zinc="cd ~/zinc/zinc-core/; killall java; git pull; docker-compose down; docker-compose up -d; ./runZincCore.sh $1"
 
 export MANPAGER='less -s -M +Gg'
 

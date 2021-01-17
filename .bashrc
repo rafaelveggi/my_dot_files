@@ -70,7 +70,7 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 # update the values of LINES and COLUMNS.
 shopt -s checkwinsize
 
-source ~/src/pretty-git-for-bash/bash_pretty_git
+source ~/pretty-git-for-bash/bash_pretty_git
 
 #################################################################
 # ZINC
